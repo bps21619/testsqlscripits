@@ -1,4 +1,4 @@
-CREATE TABLE employees (
+CREATE TABLE emp (
     employee_id   NUMERIC       NOT NULL,
     first_name    VARCHAR(1000) NOT NULL,
     last_name     VARCHAR(900)  NOT NULL,
@@ -6,7 +6,7 @@ CREATE TABLE employees (
     date_of_birth DATE                   ,
     phone_number  VARCHAR(1000) NOT NULL,
     junk          CHAR(1000)             ,
-    CONSTRAINT employees_pk
+    CONSTRAINT emp_pk
        PRIMARY KEY NONCLUSTERED (employee_id)
 );
 GO
@@ -79,8 +79,8 @@ WITH generator (n) AS
   SELECT n + 1 FROM generator
 WHERE n < 1000
 )
-INSERT INTO employees (employee_id
-                     , first_name, last_name
+INSERT INTO emp(employee_id
+                     , first_name, last_name, middel_name
                      , date_of_birth, phone_number, junk)
 select n employee_id
      , [dbo].random_string(11) first_name
@@ -91,9 +91,10 @@ select n employee_id
   from generator
 OPTION (MAXRECURSION 1000)
 GO
-UPDATE employees 
+UPDATE emp
    SET first_name='Markus', 
-       last_name='Winand'
+       last_name='Winand',
+       middel_name='bps'
  WHERE employee_id=123;
 
 exec sp_updatestats;
