@@ -6,3 +6,4 @@ for /r %%G in (*.sql) do (
 sqlcmd -S EC2AMAZ-VNULPPJ\SQLEXPRESS -E -d abc -i "%%G"
 
 )
+PAUSE
