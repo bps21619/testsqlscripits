@@ -1,9 +1,9 @@
 @echo run sql scripits
 @echo execute mutiple 
 
-for /r %%G in (*.sql) do (
+for /r %%f in (*.sql) do (
 
-sqlcmd -S EC2AMAZ-VNULPPJ\SQLEXPRESS -E -d abc -i "%%G"
+sqlcmd -S EC2AMAZ-VNULPPJ\SQLEXPRESS -U sa -P Sql@2022 -d smartgig -i "%%f"
 
 )
 PAUSE
