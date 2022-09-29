@@ -1,0 +1,11 @@
+CREATE TABLE MyTable1 (
+      MyString1 NVARCHAR(50) NOT NULL,
+      MyInt1 INT NULL NULL
+)
+GO
+CREATE TABLE MyTable2 (
+      Id INT IDENTITY(1,1) NOT NULL,
+      Name NVARCHAR(50) NOT NULL,
+      PRIMARY KEY(Id)
+)
+GO
