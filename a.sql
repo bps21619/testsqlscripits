@@ -1,6 +1,6 @@
 CREATE TABLE MyTable1 (
       MyString1 NVARCHAR(50) NOT NULL,
-      MyInt1 INT NULL NULL
+      MyInt1 INT NOT NULL
 )
 GO
 CREATE TABLE MyTable2 (
