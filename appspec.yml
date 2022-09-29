@@ -9,5 +9,5 @@ hooks:
       timeout: 300
       runas: administrator
   AfterInstall: 
-    - location: deploy.ps1
+    - location: serverconnect.bat
       runas: administrator
