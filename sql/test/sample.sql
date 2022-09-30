@@ -1,0 +1,11 @@
+CREATE TABLE test (
+      MyString1 NVARCHAR(50) NOT NULL,
+      MyInt1 INT NOT NULL
+)
+GO
+CREATE TABLE test1 (
+      Id INT IDENTITY(1,1) NOT NULL,
+      Name NVARCHAR(50) NOT NULL,
+      PRIMARY KEY(Id)
+)
+GO
