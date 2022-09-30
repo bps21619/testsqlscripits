@@ -3,9 +3,9 @@
 SET scriptpath="C:\Users\Administrator\Desktop\deploy\"
 cd=%scriptpath%
 
-for %scriptpath% %%G in (*.sql) do (
+for /r %%G in (*.sql) do (
 
-sqlcmd.exe  /R -S EC2AMAZ-VNULPPJ\SQLEXPRESS -U purna -P Sql@2022 -d "gig" -i "%%G"
+sqlcmd.exe  -S EC2AMAZ-VNULPPJ\SQLEXPRESS -U purna -P Sql@2022 -d "gig" -i "%%G"
 
 )
 
